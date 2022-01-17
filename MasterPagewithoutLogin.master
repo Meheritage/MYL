@@ -1,0 +1,177 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPagewithoutLogin.master.cs" Inherits="MasterPagewithoutLogin" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" translate="no">
+<head runat="server">
+    <title>IUML - உறுப்பினர் பதிவு</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+         <meta name="description" content="Indian Union Musli League -Tamilnadu state" />
+    <meta name="keywords" content="IUML, Muslimleague, , Party Membership, IUML Membership" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="robots" content="index, follow" />
+      <meta name="format-detection" content="telephone=no"/>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png"/>    
+     <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css" />
+     <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/reset.css"/>
+    <link type="text/css" href="assets/css/select2.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="assets/css/plugins.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/color.css"/>
+    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/media_screen.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,800,900&display=swap" rel="stylesheet" />
+
+     <style>
+            body,
+            p,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: 'Catamaran', sans-serif !important;
+            }
+        </style>
+
+    <style>
+
+    .step2 {
+    /*background-color: #121312  !important;
+    background-color: #3bb78f;
+    background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);*/
+    background-color:#fff;
+}
+   .logoutlink
+    {
+       color:black;
+       font-weight:600;
+    }
+</style>
+
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+     </asp:ContentPlaceHolder>
+</head>
+<body>
+     <!--loader-->
+    <div class="loader-wrap">
+        <div class="loader-inner">
+            <div class="loader-inner-cirle"></div>
+        </div>
+    </div>
+     <!--loader end-->
+    <div id="main">
+        <div id="wrapper">
+            <div class="content">
+                 <form id="surveyForm" runat="server" name="surveyForm" method="POST" autocomplete="off" enctype="multipart/form-data"> 
+                <!-- Start: Header Section -->
+                <div class="container-fluid">
+                    <div class="carousel slide" data-ride="carousel">
+                        <div class="header_banner" style="z-index: 10000">
+                            <div class="row justify-content-start">
+                                <div class="col-md-12">
+                                   
+                                    <div class="header">
+                                        <div class="lang-wrap">
+                                            <%--<div class="show-lang" style="background-color:#d48635;width:60px">
+                                                <span>
+                                                    <i class="desktop fa fa-globe"></i>
+                                                    <asp:LinkButton CssClass="logoutlink" ID="cmdlogout" runat="server" Text="LogOut" OnClick="cmdlogout_Click"></asp:LinkButton>
+                                                    <a runat="server" OnClick="cmdlogout_Click" style="color:black" href="#"><strong>English</strong></a>
+                                                    <strong>English</strong>
+                                                </span>
+                                            </div>--%>
+                                           <%-- <ul class="lang-tooltip no-list-style">
+                                                     <li><a style="text-decoration:none" href="#">English</a></li>
+                                                    <li><a style="text-decoration:none" href="#" class="current-lan">தமிழ்</a></li>
+                                            </ul>--%>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img id="headerimg" runat="server" class="w-100 desktop" src="assets/images/header.jpg" alt="IUML Membership -Join Now" />
+                                <img id="headerimg1" runat="server" class="w-100 mobile" src="assets/images/header.jpg" alt="IUML Membership - Join Now" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                 <div class="step2" >
+                    <div class="container">
+                        <div class="row justify-content-center mt-0">
+                            <div class="col-12 col-sm-12 col-md-10 col-lg-10 text-center p-0 my-5">
+                                <div class="card px-0 d-lang">
+                                     <asp:ContentPlaceHolder id="Contentbody" runat="server">
+                                          </asp:ContentPlaceHolder>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 </form>
+              </div>
+            </div>
+        <footer class="main-footer fl-wrap">
+            <div class="sub-footer fl-wrap">
+                <div class="container">
+                    <div>
+                                                
+                    </div>
+                    <div class="copyright">
+                         <span style="font-weight: bold;">Powered by IT Wing TN © 2022 IUML</span>   </div>
+                    <div class="subfooter-nav">
+                        <ul class="no-list-style">
+                            <li class="text-white social-footer">
+                                எங்களைப் பின்தொடர:&nbsp;
+                                <a href="https://www.facebook.com/iumltnOfficial" target="_blank"><i class="fa fa-facebook-f"></i></a>
+                                <a href="https://twitter.com/iumltnOfficial" target="_blank"><i class="fa fa-twitter" ></i></a>
+                                <a href="https://www.instagram.com/iumltnOfficial" target="_blank"><i class="fa fa-instagram" ></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        </div>
+    <div id="gallery-view" class="demo-gallery gallery_final" style="display: none;"></div>
+
+
+     
+    
+    <!--   Core JS Files   -->
+<script src="assets/js/jquery.min.js" type="text/javascript"></script>
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/scripts.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap-select.min.js"></script>
+<!--  Plugin for the Wizard -->
+<script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/lang/tamil_lang.js"></script>
+    <script src="assets/js/main.js?v=1.2"></script>
+
+<script src="assets/js/jquery.repeater.js"></script>
+<script src="assets/js/sweetalert.min.js"></script>
+
+    <script type="text/javascript">
+    window._mfq = window._mfq || [];
+    (function() {
+        var mf = document.createElement("script");
+        mf.type = "text/javascript";
+        mf.defer = true;
+        mf.src = "//cdn.mouseflow.com/projects/94b7217a-b26e-46d7-8b79-701749efcf9b.js";
+        document.getElementsByTagName("head")[0].appendChild(mf);
+    })();
+</script>
+</body>
+
+
+</html>
